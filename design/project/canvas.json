@@ -1,0 +1,76 @@
+{
+  "v": 3,
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-11-14T13:00:00Z"
+  },
+  "title": "Jon Rocha Personal Site",
+  "launch": {
+    "view": "canvas"
+  },
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 2134,
+      "title": "Home",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    "Research.dc.html": {
+      "x": 1360,
+      "y": 0,
+      "w": 1280,
+      "h": 2744,
+      "title": "Research",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    "Projects.dc.html": {
+      "x": 2720,
+      "y": 0,
+      "w": 1280,
+      "h": 1630,
+      "title": "Projects",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    "Podcast.dc.html": {
+      "x": 4080,
+      "y": 0,
+      "w": 1280,
+      "h": 2060,
+      "title": "Podcast & talks",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    "Work.dc.html": {
+      "x": 5440,
+      "y": 0,
+      "w": 1280,
+      "h": 1834,
+      "title": "Work",
+      "expand": "fill",
+      "is_interactive": true
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "Research.dc.html",
+    "Projects.dc.html",
+    "Podcast.dc.html",
+    "Work.dc.html"
+  ],
+  "notes": {
+    "heading": {
+      "x": 0,
+      "y": -300,
+      "text": "Jon Rocha · personal site, five pages",
+      "kind": "title1",
+      "maxW": 6720
+    }
+  },
+  "designSystems": []
+}

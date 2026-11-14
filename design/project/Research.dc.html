@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Research · Jon Rocha</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./site.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="site">
+
+<header class="top">
+<div class="wrap">
+<a class="brand" href="Main.dc.html"><span class="tile"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="15.5" cy="8.5" r="4" fill="currentColor"></circle><path d="M2 20c4-6 8-7 11-4 2 2 5 2 9-1v5H2z" fill="currentColor"></path></svg></span><span class="brand-name">Jon Rocha</span></a>
+<nav class="nav" aria-label="Site">
+<a href="Main.dc.html">Home</a>
+<a class="on" href="Research.dc.html" aria-current="page">Research</a>
+<a href="Projects.dc.html">Projects</a>
+<a href="Podcast.dc.html">Podcast &amp; talks</a>
+<a href="Work.dc.html">Work</a>
+</nav>
+</div>
+<div class="ruler" aria-hidden="true"></div>
+</header>
+
+<main class="wrap content">
+
+<section class="page-head">
+<div class="eyebrow">Research</div>
+<h1>What does an AI answer cost in energy?</h1>
+<p class="lede">I measure how much energy AI models use, phase by phase. I'm also exploring whether a machine's power draw can show what an AI agent is doing on it.</p>
+</section>
+
+<section class="section">
+<div class="section-head">
+<h2>JouleWise</h2>
+<span class="note">Capstone research · advisor Prof. Suzanne Rivoire · June 2026 to present</span>
+</div>
+<div class="bento">
+
+<article class="card s7">
+<span class="label">What it is</span>
+<p>JouleWise is an open-source, phase-aware instrument. It measures the energy of each phase of LLM inference on a laptop: reading the prompt, then writing the answer.</p>
+<p>The readings come from the laptop's own power sensors and an inline USB-C meter. Each measurement session runs unattended for about six hours on a dedicated machine.</p>
+<a class="more" href="https://github.com/mpmdw/JouleWise">JouleWise on GitHub</a>
+</article>
+
+<article class="card amber s5">
+<span class="label">Why it matters</span>
+<p>I'm exploring power consumption as an out-of-band signal for catching rogue AI-agent behavior. Pilots are under way.</p>
+<p>The idea comes from alignment research and recent AI-containment incidents. Power is measured outside the software an agent controls, which is what makes it interesting as a check.</p>
+</article>
+
+<figure class="card navy s12 figure">
+<div class="group">
+<span class="label">One session · about six hours · unattended</span>
+<div class="session">
+<div class="cal">opening calibration</div>
+<div class="runs">a fixed list of model runs</div>
+<div class="cal">closing calibration</div>
+</div>
+</div>
+<div class="group">
+<span class="label">The first measurement block · three sessions · one square per run</span>
+<div class="row">
+<div class="name"><b>ALPHA</b><span>Qwen3 1.7B · 125 runs</span></div>
+<div class="plate" role="img" aria-label="125 runs"><sc-for list="{{ alpha }}" as="run" hint-placeholder-count="125"><i class="sq"></i></sc-for></div>
+</div>
+<div class="row">
+<div class="name"><b>BETA</b><span>Qwen3 8B · 125 runs</span></div>
+<div class="plate" role="img" aria-label="125 runs"><sc-for list="{{ beta }}" as="run" hint-placeholder-count="125"><i class="sq"></i></sc-for></div>
+</div>
+<div class="row">
+<div class="name"><b>GAMMA</b><span>both models, alternating · 107 runs</span></div>
+<div class="plate" role="img" aria-label="107 runs"><sc-for list="{{ gamma }}" as="run" hint-placeholder-count="107"><i class="sq"></i></sc-for></div>
+</div>
+</div>
+<p class="note">Getting here took eight removed or refused attempts. Each one is kept and disclosed, and none was analysed.</p>
+</figure>
+
+</div>
+</section>
+
+<section class="section">
+<div class="section-head">
+<h2>How the results are protected</h2>
+<span class="note">Custody controls keep the agents from tampering with or inventing results</span>
+</div>
+<div class="bento">
+<article class="card s4">
+<span class="num">1</span>
+<h3>Plans are sealed first</h3>
+<p>What is measured, which checks remove a session, and how the numbers will be analysed are fixed before any data is seen.</p>
+</article>
+<article class="card s4">
+<span class="num">2</span>
+<h3>Results stay blind</h3>
+<p>Measured energies stay hidden until a recorded release, so no decision to repeat a session can depend on the result.</p>
+</article>
+<article class="card s4">
+<span class="num">3</span>
+<h3>A second computation must agree</h3>
+<p>An independent recompute has to match before a result counts.</p>
+</article>
+</div>
+</section>
+
+<section class="section">
+<div class="section-head">
+<h2>Run by a team of AI agents</h2>
+<span class="note">The repository as of 12 November 2026</span>
+</div>
+<p class="prose">JouleWise is built, reviewed and run unattended by a team of Claude and Codex agents under my direction.</p>
+<div class="card">
+<div class="stats">
+<div class="stat"><b>8,248</b><span>commits</span></div>
+<div class="stat"><b>~12,700</b><span>tests</span></div>
+<div class="stat"><b>580</b><span>merged pull requests</span></div>
+<div class="stat"><b>4–8</b><span>agents working at once</span></div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Where it stands</h2>
+<div class="timeline">
+<div class="tl"><span class="when">June 2026</span><span class="what"><b>Project started</b> as my capstone with Prof. Rivoire.</span></div>
+<div class="tl"><span class="when">October 2026</span><span class="what"><b>First measurement block collected:</b> three sessions on two Qwen3 models.</span></div>
+<div class="tl"><span class="when">November 2026</span><span class="what"><b>First result released.</b></span></div>
+<div class="tl"><span class="when">Late November 2026</span><span class="what"><b>Department colloquium talk</b> (scheduled).</span></div>
+<div class="tl"><span class="when">December 2026</span><span class="what"><b>Paper.</b></span></div>
+<div class="tl"><span class="when">Next</span><span class="what"><b>Measuring the energy cost</b> of keeping AI reasoning monitorable.</span></div>
+</div>
+</section>
+
+</main>
+
+<footer class="foot">
+<div class="wrap">
+<div>© 2026 Jon Rocha · Rohnert Park, California</div>
+<div class="foot-links">
+<a href="https://github.com/mpmdw">GitHub</a>
+<a href="https://www.linkedin.com/in/jon-r-5a007334a/">LinkedIn</a>
+<a href="https://open.spotify.com/show/1QW1CUNIwe8MuiW1PEp8dM">Podcast on Spotify</a>
+</div>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":2744}}'>
+class Component extends DCLogic {
+renderVals() {
+const runs = (n) => Array.from({ length: n }, (_, i) => ({ i: i }));
+return { alpha: runs(125), beta: runs(125), gamma: runs(107) };
+}
+}
+</script>
+</body>
+</html>
